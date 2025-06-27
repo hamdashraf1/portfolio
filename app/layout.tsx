@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hamdashraf.com'),
+  metadataBase: new URL('https://hamdashraf1.github.io/portfolio'),
   title: "Hamd Ashraf - Professional Swimming Coach & Digital Content Creator",
   description:
     "18-year-old professional swimming coach and digital content creator. Expert in swimming training, web design, graphic design, video editing, AI prompts, and media buying.",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hamdashraf.com",
+    url: "https://hamdashraf1.github.io/portfolio",
     title: "Hamd Ashraf - Professional Swimming Coach & Digital Content Creator",
     description:
       "18-year-old professional swimming coach and digital content creator. Expert in swimming training, web design, graphic design, video editing, AI prompts, and media buying.",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://hamdashraf.com",
+    canonical: "https://hamdashraf1.github.io/portfolio",
   },
     generator: 'v0.dev'
 }

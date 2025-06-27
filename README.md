@@ -2,6 +2,10 @@
 
 Professional swimming coach and digital content creator portfolio built with Next.js, TypeScript, and Tailwind CSS.
 
+## 🌐 Live Demo
+
+**Visit the live website:** [https://hamdashraf1.github.io/portfolio](https://hamdashraf1.github.io/portfolio)
+
 ## 🏊‍♂️ About Me
 
 - **Age:** 18 years old
@@ -26,6 +30,7 @@ Professional swimming coach and digital content creator portfolio built with Nex
 - **Animations:** Framer Motion
 - **UI Components:** Radix UI
 - **Icons:** Lucide React
+- **Deployment:** GitHub Pages
 
 ## 📱 Features
 
@@ -63,6 +68,18 @@ npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+### Deploying to GitHub Pages
+
+```bash
+npm run deploy
+```
 
 ## 📁 Project Structure
 

@@ -1,0 +1,16 @@
+{
+  "name": "Hamd Ashraf Portfolio",
+  "short_name": "HamdPortfolio",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#14b8a6",
+  "description": "Professional swimming coach and digital content creator portfolio.",
+  "icons": [
+    {
+      "src": "/images/hamd-ashraf.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

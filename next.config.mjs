@@ -33,8 +33,8 @@ const nextConfig = {
 
   // Image optimization
   images: {
+    unoptimized: true,
     domains: ['localhost'],
-    unoptimized: false,
     formats: ['image/webp', 'image/avif'],
   },
 
@@ -56,6 +56,9 @@ const nextConfig = {
   },
 
   generateEtags: false,
+
+  output: 'export',
+  trailingSlash: true,
 }
 
 export default nextConfig
