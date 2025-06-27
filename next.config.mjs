@@ -33,13 +33,9 @@ const nextConfig = {
 
   // Image optimization
   images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
+    domains: ['localhost'],
+    unoptimized: false,
+    formats: ['image/webp', 'image/avif'],
   },
 
   // ESLint and TypeScript configurations
@@ -54,6 +50,12 @@ const nextConfig = {
   experimental: {
     forceSwcTransforms: true,
   },
+
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+
+  generateEtags: false,
 }
 
 export default nextConfig

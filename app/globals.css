@@ -93,6 +93,27 @@ body {
   }
 }
 
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth animations */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Hide scrollbar for all browsers */
 html {
   scrollbar-width: none; /* Firefox */
@@ -126,4 +147,38 @@ body::-webkit-scrollbar {
 html,
 body {
   overflow-x: hidden;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animation performance */
+.motion-safe\:animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Glow effect */
+.motion-safe\:animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(45, 212, 191, 0.6);
+  }
 }

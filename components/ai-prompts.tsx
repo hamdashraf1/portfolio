@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Brain, Copy, Star, ExternalLink } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 
 export default function AIPrompts() {
   const [copiedId, setCopiedId] = useState<number | null>(null)
@@ -103,10 +104,13 @@ export default function AIPrompts() {
             >
               {/* Image Preview */}
               <div className="aspect-[16/10] relative overflow-hidden">
-                <img
-                  src={prompt.image || "/placeholder.svg"}
+                <Image
+                  src={prompt.image}
                   alt={prompt.title}
+                  width={600}
+                  height={375}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  priority={index < 2}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent" />
 

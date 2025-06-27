@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useEffect, useState, useCallback } from "react"
+import Image from "next/image"
 
 interface FloatingCharacterProps {
   activeSection: string
@@ -9,6 +10,7 @@ interface FloatingCharacterProps {
 
 export default function FloatingCharacter({ activeSection }: FloatingCharacterProps) {
   const [position, setPosition] = useState({ x: "50%", y: "50%", scale: 1 })
+  const [imageLoaded, setImageLoaded] = useState(false)
 
   const updatePosition = useCallback(() => {
     const positions = {
@@ -81,14 +83,18 @@ export default function FloatingCharacter({ activeSection }: FloatingCharacterPr
             }}
           >
             <div className="w-full h-full rounded-full border-2 border-teal-400/30 overflow-hidden relative">
-              <img
+              <Image
                 src="/images/hamd-ashraf.png"
                 alt="Hamd Ashraf - Professional Swimming Coach"
+                width={200}
+                height={200}
                 className="w-full h-full object-cover"
                 style={{
                   objectPosition: "center 35%",
                   transform: "scale(1.1)",
                 }}
+                onLoad={() => setImageLoaded(true)}
+                priority
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 via-transparent to-transparent" />

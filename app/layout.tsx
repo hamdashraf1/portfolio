@@ -6,6 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hamdashraf.com'),
   title: "Hamd Ashraf - Professional Swimming Coach & Digital Content Creator",
   description:
     "18-year-old professional swimming coach and digital content creator. Expert in swimming training, web design, graphic design, video editing, AI prompts, and media buying.",
